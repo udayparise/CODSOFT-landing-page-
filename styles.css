@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
 :root {
-  --primary-color: #fead53;
-  --text-dark: #333333;
-  --text-light: #ffffff33;
+  --primary-color: #15bcbf;
+  --text-dark: #222020;
+  --text-light: #0c0a0a33;
   --extra-light: #f3f4f6;
 
   --max-width: 1300px;
@@ -63,29 +63,36 @@ nav {
 .nav__links .link {
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--extra-light);
+  color: #035656;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .nav__links .link:hover {
-  color: var(--primary-color);
+  color: #fffefe;
 }
 
 .search__box {
+--padding: 24px;
+
+  border-radius: 28px;
+  display: flex;
+  width: max-content;
+  background: #f6f6f6;
   padding: 0.5rem 0;
   border-bottom: 2px solid var(--extra-light);
 }
 
 .search__box input {
-  color: var(--extra-light);
+  color: #333333;
   background-color: transparent;
+  margin-left: var(--padding);
   outline: none;
   border: none;
 }
 
 .search__box i {
-  color: var(--extra-light);
+  color: #333333;
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -123,6 +130,7 @@ nav {
 
 .content p {
   color: var(--extra-light);
+  animation-delay: 1.0s;
 }
 
 .btns {
@@ -145,6 +153,7 @@ nav {
 button.read__more {
   background-color: var(--extra-light);
   color: var(--text-dark);
+
 }
 
 button.our__blogs:hover {
@@ -240,3 +249,125 @@ form button {
 .bottom__tracker span:nth-child(2) {
   background-color: var(--extra-light);
 }
+
+
+.anim{
+  opacity:0;
+  transform: translateY(30px);
+  animation: moveup 1.0s linear forwards;
+}
+@keyframes moveup{
+  100%{
+    opacity:1;
+    transform: translateY(30px);
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+footer{
+  background-color: #00000000;
+}
+.footerContainer{
+  width: 100%;
+  padding: 70px 30px 20px ;
+}
+.Icons{
+  display: flex;
+  justify-content: center;
+}
+.Icons a{
+  text-decoration: none;
+  padding:  10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+.Icons a i{
+  font-size: 2em;
+  color: rgb(26, 23, 23);
+  opacity: 0.9;
+}
+/* Hover affect on social media icon */
+.Icons a:hover{
+  background-color: #00000000;
+  transition: 0.5s;
+}
+.Icons a:hover i{
+  color: rgb(21, 151, 156);
+  transition: 0.5s;
+}
+.Nav{
+  margin: 30px 0;
+}
+.Nav ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.Nav ul li a{
+  color:white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+
+}
+.Nav ul li a:hover{
+  opacity: 1;
+}
+.footerBottom{
+  background-color: #00000000;
+  padding: 20px;
+  text-align: center;
+}
+.footerBottom p{
+  color: white;
+}
+.designer{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+@media (max-width: 700px){
+  .footerNav ul{
+      flex-direction: column;
+  } 
+  .footerNav ul li{
+      width:100%;
+      text-align: center;
+      margin: 10px;
+  }
+  .socialIcons a{
+      padding: 8px;
+      margin: 4px;
+  }
+}
+
+
+.bg__video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .bg__video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .bg__video {
+    width: auto;
+    height: 100%;
+  }
